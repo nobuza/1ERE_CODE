@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>BASIC CALCULATOR</title>
+      <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    
+
+    <!-------------+----------------+-------------+------------HTML-----------+--------------+-----------+-------------+----------+-->
+    <h1>BASIC CALCULATOR WITH DROPDOWN FOR OPERATOR</h1>
+    
+    <p class="operatorsList">Handles the following operators: + - / *</p>    
+
+    <input type="text" id="number1" name="name" required minlength="1" maxlength="9999">
+    
+    <select id="operatorDropdown">
+      <option value="OPERATOR" selected="selected">Choose</option>
+      <option value="+" >+</option>
+      <option value="-" >-</option>
+      <option value="*" >*</option>
+      <option value="/" >/</option>
+    </select>
+    
+    <input type="text" id="number2" name="name" required minlength="1" maxlength="9999">
+
+    <button onclick="calculate(document.getElementById('operatorDropdown').value)" class="buttonResult">=</button>
+    <!--<button onclick="calculate('*')" class="buttonResult">=</button>   -->
+
+    <input type="text" id="resultText" name="resultText" value="RESULT"/>
+    <!-------------+----------------+-------------+------------JAVASCRIPT-----------+--------------+-----------+-------------+----------+-->
+    <script>
+      function calculate(operator){
+        var a,b;
+        var selectDropdown = document.getElementById('operatorDropdown');
+        var dropdownSelectedOperator = selectDropdown.options[selectDropdown.selectedIndex].value;
+        console.log("dropdownSelectedOperator equals to:", dropdownSelectedOperator); // en
+        a = document.getElementById("number1").value;
+        b = document.getElementById("number2").value;
+        var result = eval(a+operator+b);
+        document.getElementById("resultText").value = result;
+        return result;
+      }
+    </script>
+</html>
+

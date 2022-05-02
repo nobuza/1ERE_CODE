@@ -1,0 +1,5 @@
+Question; Correct Answer; Wrong answer N01; Wrong answer N02; Wrong answer N03
+The capital of Canada?; Ottawa; Toronto; Montreal; Vancouver
+The capital of Danemark?; Copenhagen; Aarhus; Odense; Horsens
+The capital of Bulgaria?; Sofia; Plovdiv; Varna; Burgas
+The capital of Poland?; Warsaw; Lodz; Karkaw; Snowdin

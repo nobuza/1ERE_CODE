@@ -1,0 +1,16 @@
+AFFICHAGE EN CARACTERE
+      MOV R0,#20
+      MOV R1,#22
+      ADD R2,R0,R1
+      OUT R2,5
+      MOV R3,#72
+      MOV R4,#69
+      MOV R5,#76
+      MOV R6,#76
+      MOV R7,#79
+      OUT R3,7
+      OUT R4,7
+      OUT R5,7
+      OUT R6,7
+      OUT R7,7
+      HALT
