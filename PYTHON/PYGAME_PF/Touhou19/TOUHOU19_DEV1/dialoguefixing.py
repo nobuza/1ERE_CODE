@@ -78,10 +78,13 @@ def get_border_rects(inner_rect, outer_rect):
     return [l_rect, r_rect, t_rect, b_rect]
 
 def get_font_watatsuki(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font(curDir + font_path + 'WatatsukiTechSans.ttf', size)
+    return pygame.font.Font(curDir + font_path + "WatatsukiTechSans.ttf", size)
 
 def get_font_yuki_boku(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font(curDir + font_path + 'YujiBoku-Regular.ttf', size)
+    return pygame.font.Font(curDir + font_path + "YujiBoku-Regular.ttf", size)
+
+def get_font_popcorn(size): # Returns Press-Start-2P in the desired size
+    return pygame.font.Font(curDir + font_path + "DFPPOPCorn-W12.ttf", size)
 
 # Classes ------------------------------------------
 class Reimu(pygame.sprite.Sprite):
@@ -227,7 +230,8 @@ def play():
     # Dialogue utilities ------------------------------------------------- #
     dialogue_box = pygame.Rect(300, 200, 100, 100)
 
-    font = pygame.font.SysFont('Times New Roman', 30)
+    #font = pygame.font.SysFont('Times New Roman', 30) #get_font_popcorn
+    font = get_font_popcorn(30)
     texts = ["Well hello there.", "Hi! Who are you? Another youkai in my way?", "Passing by. Encountering people. Fighting them", "Is that so? I'll have to make my way then."]
     text_renders = [font.render(text, True, (0, 0, 255)) for text in texts]
     index = -1
@@ -245,9 +249,11 @@ def play():
         # Texts ----------------------------------------------------------- # We are packing the TEXT_TEXT and the TEXT_RECT in tuples so we can pass them in a "for each" to blit them on screen 
         TITLE_TEXT = get_font_yuki_boku(45).render("東方Project", True, "White")
         TITLE_RECT = TITLE_TEXT.get_rect(center=(950, 50))
-        SCREEN.blit(TITLE_TEXT, TITLE_RECT)
 
-        TEXTS_CONTAINER = [[TITLE_TEXT, TITLE_RECT]]
+        SUBTITLE_TEXT = get_font_yuki_boku(20).render("Sparkles of the sun", True, "White")
+        SUBTITLE_RECT = TITLE_TEXT.get_rect(center=(950, 125))
+
+        TEXTS_CONTAINER = [[TITLE_TEXT, TITLE_RECT], [SUBTITLE_TEXT, SUBTITLE_RECT]]
 
 
         # Event handler ----------------------------------------------------------- #
@@ -288,10 +294,9 @@ def play():
         for text in TEXTS_CONTAINER:
             SCREEN.blit(text[0], text[1])
         
-        pygame.draw.rect(SCREEN, (0, 255, 0), dialogue_box, width=2)
-
+            # Dialogue stuff
         if dialogue_occuring:
-            SCREEN.blit(dialogue_box_surface, (50,650))    # (0,0) are the top-left coordinates
+            SCREEN.blit(dialogue_box_surface, (50,650)) # top-left coordinates
             if keys[pygame.K_SPACE] and space_released:
                 space_released = False
                 index = (index + 1) if (index + 1) != len(text_renders) else 0
