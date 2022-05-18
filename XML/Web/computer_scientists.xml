@@ -1,0 +1,14 @@
+<xml>
+	<person>
+		<name>Alan Turing</name>
+		<who>mathématicien et cryptologue britannique</who>
+		<birth>23 juin 1912 (Londres)</birth>
+		<death>7 juin 1954 (Wilmslow, Londres)</death>
+	</person>
+	<person>
+		<name>Augusta Ada King, comtesse de Lovelace</name>
+		<who>pionnière de la science informatique</who>
+		<birth>10 décembre 1815 (Londres)</birth>
+		<death>27 novembre 1852 (Marylebone)</death>
+	</person>
+</xml>

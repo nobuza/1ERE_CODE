@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Javascript prompt</title>
+		<meta name="description" content="User input in Javascript"/>
+		<style type='text/css'>
+		</style>
+		
+	</head>
+	<body>
+		<p id="son_blaze"></p>
+		<script type='text/javascript'>
+			let user_input = prompt('Quel est ton nom ?', "I'm sure you have a name");
+			if( user_input != '' ){
+				document.getElementById("son_blaze").innerHTML = user_input;
+			}
+		</script>
+	</body>
+</html>

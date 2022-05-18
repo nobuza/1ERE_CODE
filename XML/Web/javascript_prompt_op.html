@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Javascript prompt : eval is bad</title>
+		<meta name="description" content="User input in Javascript"/>
+		<style type='text/css'>
+		</style>
+	</head>
+	<body>
+		<p id="resultat"></p>
+		
+		<script type='text/javascript'>
+			let user_input = prompt('Saisi une opération :', "1+1");
+			if( user_input != '' ){
+				document.getElementById("resultat").innerHTML = eval(user_input);
+			}
+		</script>
+	</body>
+</html>

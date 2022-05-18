@@ -1,0 +1,104 @@
+<xml>
+	<projet>
+		<titre>
+			-thèque
+		</titre>
+		<but>
+			Le but est de faire une base de connaissance accessible et modifiable par un utilisateur.
+			Par exemple une film-o-thèque, avec :
+			-	un fichier CSV qui contient le titre, le résumé, une critique et une note du film
+			-	l’utilisateur peut :
+			o	obtenir la critique d’un film saisi
+			o	voir la liste des films dont la note est supérieur ou égale à une note donnée
+			o	demander un film au hasard
+			o	ajouter un film
+			o	modifier les données d’un film			
+		</but>
+	</projet>
+	<projet>
+		<titre>Jeu de la bataille (carte)</titre>
+		<but>
+			Le but est de faire un jeu de bataille jouable avec l’ordinateur.
+			-	un fichier CSV qui contient le nom des cartes avec leur valeur
+			-	tirage aléatoire des jeux du joueur et de l’ordinateur
+			-	jeu simple : « cartes fermées », le joueur joue la première carte de son tas puis l’ordinateur joue …
+			-	jeu plus compliqué, « fausse bataille » : le joueur joue une carte de son jeu, l’ordinateur joue une carte meilleure ou la carte la meilleure (la plus petite des cartes supérieure à la carte jouée).
+			-	stocker le nom du joueur ainsi que la date de la victoire.(CSV)
+		</but>
+	</projet>
+	<projet>
+		<titre>Jeu des opérations mathématiques</titre>
+		<but>
+			-	générer des équations mathématiques aléatoires (opérandes et opérateur(s)
+			-	le joueur doit deviner le résultat de l’équation
+			-	stocker le nom ainsi que le score du joueur (CSV)
+		</but>
+	</projet>
+	<projet>
+		<titre>Jeu de mémoire</titre>
+		<but>
+			-	générer une liste de nombre aléatoire
+			-	montrer 2 seconde le premier élément de la liste, le joueur doit dire quelle était le chiffre. Montrer le 1er élément de la liste 2s puis le deuxième 2s, le joueur doit dire quelles étaient les chiffres dans l’ordre …
+			-	si le joueur se rappelle de tous les chiffres il gagne, sinon il perd 
+			-	stocker le nom et le score du joueur (CSV)
+		</but>
+	</projet>
+	<projet>
+		<titre>Variante du jeu de mémoire</titre>
+		<but>
+			Jeu de mémoire avec des mots :
+			-	CSV qui contient un certain nombre de phrase,
+			-	l’ordinateur tire une phrase au hasard et mélange les mots,
+			-	les mots sont montrés sur le principe du jeu de mémoire,
+			-	si le joueur retrouve tous les mots il doit ensuite les remettre dans l’ordre pour refaire la phrase de début.
+			-	stocker le nom et le score du joueur (CSV)
+		<but>
+	</projet>
+	<projet>
+		<titre>Base SPA</titre>
+		<but>
+			-	CSV, type d’animaux, race, âge, joueur oui/non, affectif oui/non
+			-	recherche d’animaux par critère par l’utilisateur, affichage des animaux correspondants
+			-	 suppression d’un animal de la liste si adopté
+		</but>
+	</projet>
+	<projet>
+		<titre>Jeu des 7 familles</titre>
+		<but>
+			Completer le plus de famille possible.
+			-	CSV 7 familles (Martin, Dupond ...) de 6 cartes (grand père, grand mère, père, mère, fils, fille)
+			-	le joueur reçoit 6 cartes au hasard,
+			-	il demande à l'ordinateur une famille, puis une personne, si l'ordi l'a il la donne au joueur, sinon le joueur tire une carte dans la pioche
+			-	si le joueur a une famille, il l'a sort de sa main
+			-	stocker le nom et le score du joueur (nombre de famille complétée) (CSV)
+		</but>
+	</projet>
+	<projet>
+		<titre>Pyramide</titre>
+		<but>
+			Le but est de trouver un mot par association de mots :
+			-	CSV ui contient une liste de mots et le mot a trouver (ex. [moudre, filtre, italien, expresso] -> café)
+			-	les mots sont donnés un par un, à chaque fois le joueur tente de trouver le mot
+			-	plus il y a d’indice, moins il y a de points
+			-	stocker le nom du joueur et le score (CSV)
+		</but>
+	</projet>
+	<projet>
+		<titre>Chercher l’intrus</titre>
+		<but>
+			-	CSV qui contient une liste de mot (ex. 4) avec un intrus (exemple d’entêtes : ok1, ok2, ok3, intrus)
+			-	l’ordinateur choisi une liste au hasard, les mots sont mélangés
+			-	le joueur doit trouver l’intrus
+			-	stocker le nom et le score (ex. nombre d’intrus trouvés)
+		</but>
+	</projet>
+	<projet>
+		<titre>Baccalauréat</titre>
+		<but>
+			-	CSV qui contient des noms de fruits, villes et prénom
+			-	l’ordinateur tire une lettre aléatoirement
+			-	le joueur doit donner un nom de fruit, de ville et un prénom. Les mots sont vérifiés.
+			-	stocker le nom et le score du joueur.
+		</but>
+	</projet>
+</xml>

@@ -1,0 +1,16 @@
+<xml>
+	<quizz>
+		<question>Qu'est-ce que Javascript ?</question>
+		<answer>JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web</answer>
+	</quizz>
+	<quizz>
+		<question>Qu'est-ce que HTML ?</question>
+		<answer>
+			<p>Le HyperText Markup Language, généralement abrégé HTML ou, dans sa dernière version, HTML5, est le langage de balisage conçu pour représenter les pages web.</p><p>Ce langage permet :</p><ul><li>d’écrire de l’hypertexte, d’où son nom,</li><li>de structurer sémantiquement la page,</li><li>de mettre en forme le contenu,</li><li>de créer des formulaires de saisie,</li><li>d’inclure des ressources multimédias dont des images, des vidéos, et des programmes informatiques,</li><li>de créer des documents interopérables avec des équipements très variés de manière conforme aux exigences de l’accessibilité du web.</li></ul>
+		</answer>
+	</quizz>
+	<quizz>
+		<question>Qu'est-ce que CSS ?</question>
+		<answer>Les feuilles de style en cascade1, généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML et XML.</answer>
+	</quizz>
+</xml>

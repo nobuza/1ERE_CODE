@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script type='text/javascript'>
+			function addition(){
+				var op_1 = document.getElementById("operand_1").value;
+				var op_2 = document.getElementById("operand_2").value;
+				var e = document.getElementById("operator");
+				var operator = e.value;
+				//var e = document.getElementById("ddlViewBy");
+				//var strUser = e.options[e.selectedIndex].text;
+				
+				var result;
+				if(operator == "+"){
+					result = parseInt(op_1) + parseInt(op_2);
+				}
+				else if(operator == "-"){
+					result = parseInt(op_1) - parseInt(op_2);
+				}
+				else if(operator == "/"){
+					result = parseInt(op_1) / parseInt(op_2);
+				}
+				else if(operator == "*"){
+					result = parseInt(op_1) * parseInt(op_2);
+				}
+				
+				document.getElementById("result").value = result;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Calcule entre deux valeurs selon l'opérateur selectionné</h3>
+		<form>
+			<input type="text" id="operand_1"  value="" size="30">
+			<select id="operator">
+				<option value="+" selected="selected">+</option>
+				<option value="-">-</option>
+				<option value="/">/</option>
+				<option value="*">*</option>
+			</select>
+			<input type="text" id="operand_2"  value="" size="30"><br>
+			<input type="button" id="bouton" value="Calculer" size="30" onclick="addition()"><br><br>
+			<input type="text" id="result"  size="30" value="">
+		</form>
+	</body>
+</html>

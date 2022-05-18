@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type='text/javascript'>
+			function loadNChooseRandom(){
+				const xhttp = new XMLHttpRequest();
+				xhttp.onload = function() {
+				  const xmlDoc = xhttp.responseXML; 
+				  const person = xmlDoc.getElementsByTagName("person");
+				  chooseRandom(person);
+				}
+				xhttp.open("GET", "computer_scientists.xml");
+				xhttp.send();
+			}
+			function chooseRandom(data) {
+				// Returns a random integer from 1 to 10:
+				const random = Math.floor(Math.random() * 2);
+				document.getElementById("person").innerHTML =
+				"Name: " +
+				data[random].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+				"<br>Who: " +
+				data[random].getElementsByTagName("who")[0].childNodes[0].nodeValue +
+				"<br>Birth: " + 
+				data[random].getElementsByTagName("birth")[0].childNodes[0].nodeValue;
+				"<br>Death: " + 
+				data[random].getElementsByTagName("death")[0].childNodes[0].nodeValue;
+			}
+			
+			function loadNDisplayAll(){
+				const xhttp = new XMLHttpRequest();
+				xhttp.onload = function() {
+				  const xmlDoc = xhttp.responseXML; 
+				  const person = xmlDoc.getElementsByTagName("person");
+				  displayAll(person);
+				}
+				xhttp.open("GET", "computer_scientists.xml");
+				xhttp.send();
+			}
+			
+			function displayAll(data) {
+				let table="<table><tr><th>Person</th><th>Who</th></tr>";
+				for (let i = 0; i < data.length; i++) {
+					table += "<tr><td>" +
+					data[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+					"</td><td>" +
+					data[i].getElementsByTagName("who")[0].childNodes[0].nodeValue +
+					"</td></tr>";
+				}
+				table += "</table>"
+				document.getElementById("person").innerHTML = table;
+			}
+		</script>
+	</head>
+	<body>
+		<div id='buttons'>
+			<input type='button' id='random' value='Random' onclick='loadNChooseRandom()'/>
+			<input type='button' id='all' value='All' onclick='loadNDisplayAll()'/>
+		</div>
+		<div id='person'></div>
+	</body>
+</html>
